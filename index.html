@@ -14,7 +14,16 @@
     <img class="travo_logo" src="./assets/logo.png" alt="Travo" />
     <span>Travo</span>
   </div>
-  <nav>
+
+  <!-- HAMBURGER (MOBILE) -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAV LINKS -->
+  <nav class="nav-links">
     <a href="#">Home</a>
     <a href="#">Explore Tours</a>
     <a href="#">Become a Guide</a>
@@ -24,10 +33,7 @@
 </header>
 
 <!-- HERO -->
-<!-- HERO -->
 <section class="hero">
-  <!-- <img src="hero.png" alt="Adventure" class="hero-bg" /> -->
-
   <div class="hero-content">
     <h1>Discover Adventures<br />with Expert Local Guides</h1>
     <p>
@@ -41,33 +47,36 @@
   </div>
 </section>
 
-
 <!-- FEATURES -->
-<section >
-    <div class="travo_feature">
-        <div class="choose_travo">
-            <h2>Why Choose Travo?</h2>
-            <p>Vetted professionals in every destination</p>
-        </div>
-        <div class="features">
-            <div class="card">
-                <img class="feature_guide" src="./assets/certified_guide.png" />
-                <h3>Certified Guides</h3>
-                <p>Vetted professionals in every destination</p>
-            </div>
-            <div class="card">
-                <img class="feature_guide" src="./assets/certified_location.png" />
-                <h3>Custom Tours</h3>
-                <p>Personalized adventures tailored for you</p>
-            </div>
-            <div class="card">
-                <img class="feature_guide" src="./assets/certified_lock.png" />
-                <h3>Safe & Secure</h3>
-                <p>Safety and satisfaction guaranteed</p>
-            </div>
-        </div>
-        <button class="btn green">Get Started</button>
+<section>
+  <div class="travo_feature">
+    <div class="choose_travo">
+      <h2>Why Choose Travo?</h2>
+      <p>Vetted professionals in every destination</p>
     </div>
+
+    <div class="features">
+      <div class="card">
+        <img class="feature_guide" src="./assets/certified_guide.png" />
+        <h3>Certified Guides</h3>
+        <p>Vetted professionals in every destination</p>
+      </div>
+
+      <div class="card">
+        <img class="feature_guide" src="./assets/certified_location.png" />
+        <h3>Custom Tours</h3>
+        <p>Personalized adventures tailored for you</p>
+      </div>
+
+      <div class="card">
+        <img class="feature_guide" src="./assets/certified_lock.png" />
+        <h3>Safe & Secure</h3>
+        <p>Safety and satisfaction guaranteed</p>
+      </div>
+    </div>
+
+    <button class="btn green">Get Started</button>
+  </div>
 </section>
 
 <!-- DESTINATIONS -->
@@ -91,17 +100,20 @@
 <section class="guide">
   <h2>Become a Guide</h2>
   <p>Join Travo as a local guide and share your passion for adventure</p>
+
   <div class="guide-steps">
     <div>
       <img class="feature_guide" src="./assets/apply.png" />
       <h4>Apply</h4>
       <p>Submit your application</p>
     </div>
+
     <div>
       <img class="feature_guide" src="./assets/verify.png" />
       <h4>Verify</h4>
       <p>Complete verification</p>
     </div>
+
     <div>
       <img class="feature_guide" src="./assets/guide.png" />
       <h4>Guide</h4>
@@ -113,8 +125,7 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
-    
-    <!-- BRAND -->
+
     <div class="footer-brand">
       <div class="footer-logo">
         <img src="./assets/logo.png" alt="Travo" />
@@ -126,7 +137,6 @@
       </p>
     </div>
 
-    <!-- EXPLORE -->
     <div class="footer-links">
       <h4>Explore</h4>
       <a href="#">Popular Tours</a>
@@ -135,7 +145,6 @@
       <a href="#">Custom Trips</a>
     </div>
 
-    <!-- GUIDES -->
     <div class="footer-links">
       <h4>For Guides</h4>
       <a href="#">Become a Guide</a>
@@ -144,7 +153,6 @@
       <a href="#">Guide FAQs</a>
     </div>
 
-    <!-- SUPPORT -->
     <div class="footer-links">
       <h4>Support</h4>
       <a href="#">Help Center</a>
@@ -155,12 +163,30 @@
 
   </div>
 
-  <!-- COPYRIGHT -->
   <div class="footer-bottom">
     <p>© 2026 Travo. All rights reserved.</p>
     <p>Built with ❤️ for explorers</p>
   </div>
 </footer>
+
+<!-- NAVBAR JS -->
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+
+  // Close menu when clicking any nav link
+  document.querySelectorAll(".nav-links a, .nav-links button").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      hamburger.classList.remove("open");
+    });
+  });
+</script>
 
 
 </body>
