@@ -174,3 +174,196 @@ body {
   background-repeat: no-repeat;
   text-align: center;
 }
+
+.travo_logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.footer {
+  background: #0f2f24;
+  color: #e8f5ef;
+  padding: 60px 80px 20px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer-logo img {
+  width: 36px;
+}
+
+.footer-brand p {
+  margin-top: 14px;
+  line-height: 1.6;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-links h4 {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.footer-links a {
+  display: block;
+  color: #cfe8de;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+
+@media (max-width: 768px) {
+
+  /* GLOBAL */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .navbar nav a {
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 70vh;
+    background-position: center;
+  }
+
+  .hero-content {
+    position: static;
+    transform: none;
+    padding: 40px 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* WHY TRAVO */
+  .travo_feature {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* DESTINATIONS */
+  .destinations {
+    padding: 40px 20px;
+  }
+
+  .dest-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dest-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* GUIDE */
+  .guide {
+    padding: 40px 20px;
+  }
+
+  .guide-steps {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .feature_guide {
+    height: 80px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
