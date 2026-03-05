@@ -53,7 +53,7 @@ body {
   height: 85vh;
   width: 100%;
   overflow: hidden;
-  background-image: url("./assets/hero.png");
+  background-image: url("./assets/hero.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -169,7 +169,7 @@ body {
   height: 70vh;
   width: 100%;
   overflow: hidden;
-  background-image: url("./assets/bg_image_location.png");
+  background-image: url("./assets/bg_image_location.webp");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
